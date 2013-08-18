@@ -1,7 +1,7 @@
-base     dokuwiki-template-manueldeinert
+base     dokuwiki-template-aran
 author   Dennis Plöger
 email    develop@dieploegers.de
-date     2013-08-15
-name     Template for manueldeinert.de
-desc     Template for manueldeinert.de
-url      http://manueldeinert.de
+date     2013-08-18
+name     Aran-Template
+desc     Template based on the aran template by Studio 7 Design
+url      http://dokuwiki.org/template:aran

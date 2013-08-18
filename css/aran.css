@@ -82,6 +82,14 @@ body {
     background-color: white;
 }
 
+/** Sidebar **/
+
+#dokuwiki__aside {
+
+    padding-left: 20px;
+
+}
+
 /** Content **/
 
 #dokuwiki__content .page

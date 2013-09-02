@@ -10,3 +10,4 @@ $meta['hideTools']        = array('onoff');
 $meta['tagline']          = array('string');
 $meta['sidebarID']        = array('string');
 $meta['menuID']           = array('string');
+$meta['footerID']         = array('string');

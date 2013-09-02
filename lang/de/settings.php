@@ -10,3 +10,4 @@ $lang['hideTools']        = 'Tools abschalten, wenn der Benutzer nicht angemelde
 $lang['tagline']          = 'Tagline (<strong>veraltet</strong>, nuten Sie die Basiseinstellung "tagline" - verfügbar seit Adora Belle)';
 $lang['sidebarID']        = 'Seitenname der Sidebar (<strong>veraltet</strong>, nutzen Sie die Basiseinstellung "sidebar" - verfügbar seit Adora Belle)';
 $lang['menuID']           = 'Seitenname des Menus';
+$lang['footerID']         = 'Seitenname des Footers';

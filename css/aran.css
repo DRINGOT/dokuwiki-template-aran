@@ -18,6 +18,31 @@ body {
 
 /** Header **/
 
+#dokuwiki__header {
+
+    display:none;
+
+}
+
+#aranheader #dokuwiki__header {
+
+    display: block;
+
+}
+
+#dokuwiki__header > .pad {
+    margin-left: 15px;
+    padding-left: 1em;
+    margin-right: 15px;
+    padding-right: 1em;
+}
+
+#searchform {
+    float: right;
+    margin-right: 15px;
+    padding-right: 1em;
+}
+
 #dokuwiki__top {
 
     padding-top: 42px;

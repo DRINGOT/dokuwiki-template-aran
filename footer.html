@@ -2,6 +2,11 @@
 
     <span class="style5">
         <?php tpl_include_page(tpl_getConf('footerID')); ?>
+        <?php
+            tpl_action('register', 1);
+            print "&nbsp;";
+            tpl_action('login', 1);
+        ?>
     </span>
 
     <br />

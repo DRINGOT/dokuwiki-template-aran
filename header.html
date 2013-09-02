@@ -1,3 +1,10 @@
+<?php
+
+    global $conf;
+    global $_SERVER;
+    $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && $_SERVER['REMOTE_USER'] );
+
+?>
 <div id="header">
 </div>
 <div id="top">
@@ -5,3 +12,55 @@
         tpl_include_page(tpl_getConf('menuID'));
     ?>
 </div>
+<div id="searchform"><?php tpl_searchform() ?></div>
+<!-- ********** HEADER ********** -->
+<div id="aranheader"><div id="dokuwiki__header">
+    <div class="pad">
+
+    <div class="headings">
+        <ul class="a11y skip">
+            <li><a href="#dokuwiki__content"><?php echo $lang['skip_to_content'] ?></a></li>
+        </ul>
+        <div class="clearer"></div>
+    </div>
+
+    <div class="tools">
+        <?php if ($conf['useacl'] && $showTools): ?>
+        <!-- USER TOOLS -->
+        <div id="dokuwiki__usertools">
+            <h3 class="a11y"><?php echo $lang['user_tools'] ?></h3>
+            <ul>
+                <?php /* the optional second parameter of tpl_action() switches between a link and a button,
+                                     e.g. a button inside a <li> would be: tpl_action('edit', 0, 'li') */
+                if ($_SERVER['REMOTE_USER']) {
+                echo '<li class="user">';
+                tpl_userinfo(); /* 'Logged in as ...' */
+                echo '</li>';
+                }
+                tpl_action('recent', 1, 'li');
+                tpl_action('media', 1, 'li');
+                tpl_action('index', 1, 'li');
+                tpl_action('admin', 1, 'li');
+                _tpl_action('userpage', 1, 'li');
+                tpl_action('profile', 1, 'li');
+                tpl_action('register', 1, 'li'); /* DW versions < 2011-02-20 need to use _tpl_action('register', 1, 'li') */
+                tpl_action('login', 1, 'li');
+                ?>
+            </ul>
+        </div>
+
+        <?php endif ?>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+    <?php if($conf['breadcrumbs']){ ?>
+    <div class="breadcrumbs"><?php tpl_breadcrumbs() ?></div>
+    <?php } ?>
+    <?php if($conf['youarehere']){ ?>
+    <div class="breadcrumbs"><?php tpl_youarehere() ?></div>
+    <?php } ?>
+
+    <div class="clearer"></div>
+    <hr class="a11y" />
+</div></div></div><!-- /header -->
